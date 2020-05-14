@@ -8,5 +8,25 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-iten *ngFor='let amigo of amigos'>
+      <ion-grid>
+        <ion-row>
+          <ion-col size='6'>
+            {{amigo.nome}}
+          </ion-col>
+          <ion-col size='2'>
+            {{amigo.idade}}
+          </ion-col>
+          <ion-col size='2'>
+            {{amigo.level}}
+          </ion-col>
+          <ion-col size='2'>
+            <ion-icon name="layers-outline"(click)="deleteAmigoAction(amigo.nome)"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-iten>
+  </ion-list>
 
 </ion-content>

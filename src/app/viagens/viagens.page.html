@@ -8,5 +8,15 @@
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor='let viagem of viagens'>
+    <img src="{{viagem.img}}"/>
+    <ion-card-header>
+      <ion-card-title>{{viagem.local}}</ion-card-title>
+      <ion-card-subtitle>{{viagem.data}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{viagem.descricao}}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
